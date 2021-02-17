@@ -1,0 +1,26 @@
+{
+    "name": "download",
+    "version": "1.0.0",
+    "description": "One way to earn",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "body-parser": "^1.19.0",
+        "cheerio": "^1.0.0-rc.5",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "method-override": "^3.0.0",
+        "mongoose": "^5.11.13",
+        "morgan": "^1.10.0",
+        "request": "^2.88.2",
+        "request-promise": "^4.2.6",
+        "swagger-ui-express": "^4.1.6"
+    }
+}

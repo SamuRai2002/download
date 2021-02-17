@@ -1,0 +1,118 @@
+{
+    "/api/videos/": {
+        "get": {
+            "description": "Get all videos",
+            "tags": ["Videos"],
+
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "post": {
+            "description": "Create video",
+            "tags": ["Videos"],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/VideoCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/videos/{id}": {
+        "get": {
+            "description": "Get video by ID",
+            "tags": ["Videos"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Video ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "patch": {
+            "description": "Update video",
+            "tags": ["Videos"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Video ID",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/VideoUpdate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Delete video",
+            "tags": ["Videos"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Video ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/videos/single": {
+        "post": {
+            "description": "Create a single video",
+            "tags": ["Videos"],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/SingleCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

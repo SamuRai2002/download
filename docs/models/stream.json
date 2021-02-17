@@ -1,0 +1,10 @@
+{
+    "StreamCreate": {
+        "properties": {
+            "page": {
+                "type": "number",
+                "required": true
+            }
+        }
+    }
+}

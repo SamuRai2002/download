@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Video",
+        "description": "Video endpoints"
+    },
+    {
+        "name": "Stream",
+        "description": "Stream endpoints"
+    }
+]

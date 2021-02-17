@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@600&family=Noto+Sans+JP:wght@100&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            .wrapper {
+                position: relative;
+            }
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                border: 1px solid transparent;
+                border-bottom-left-radius: 11px;
+                border-bottom-right-radius: 11px;
+                width: 100%;
+                background: rgba(50, 50, 50, 0.5);
+            }
+            .press {
+                display: block; /* Remove bullet points; allow greater control of positioning */
+                padding: 0; /* Override defaults for lists */
+                margin: 0; /* Override defaults for lists */
+                width: 100%; /* Get the row full width */
+            }
+
+            .press li {
+                display: inline-block; /* Get all images to show in a row */
+                width: 2%; /* Show 4 logos per row */
+                text-align: center; /* Centre align the images */
+            }
+
+            @media (max-width: 960px) and (min-width: 501px) {
+                .press li {
+                    width: 4%;
+                } /* Show 2 logos per row on medium devices (tablets, phones in landscape) */
+            }
+
+            @media (max-width: 500px) {
+                .press li {
+                    width: 8%;
+                } /* On small screens, show one logo per row */
+            }
+        </style>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="icon"
+            href="https://i.playboard.app/p/AATXAJwFJxpdYBRIkFJvjOnL_7C2OPdFOAKx9eRsk4gecA/100x100.jpg"
+            type="image/x-icon"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Download HD Porn</title>
+    </head>
+    <body
+        style="background: #040936; font-family: 'Architects Daughter', cursive"
+    >
+        <nav
+            class="navbar navbar-expand-lg navbar-dark"
+            style="background-color: #040936"
+        >
+            <a class="navbar-brand" href="/">HDPorn</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/latest">Latest</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/trend">Most downloaded</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/stream">Watch online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/top">Most watched</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/animations">Animated Porn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/story">Horny story</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container" style="border-top: 1px solid aqua">
+            <h1 class="mt-2 mb-2" style="color: aqua">
+                Free Porn Videos to Download
+            </h1>
+            <h4 class="mb-2" style="color: aqua">Most Downloaded Sex Videos</h4>
+            <div class="row">
+                <% videos.forEach(video => { %>
+                <div class="col-md-4 col-lg-3 col-sm-6 mt-4 d-flex">
+                    <div
+                        class="card"
+                        style="
+                            width: 98%;
+                            border-radius: 11px;
+                            border: 1px solid aqua;
+                        "
+                    >
+                        <a href="/trend/<%= video._id %>">
+                            <div class="wrapper">
+                                <img
+                                    class="img-responsive"
+                                    src="<%= video.image %>"
+                                    style="
+                                        width: 100%;
+                                        border: 1px solid aqua;
+                                        border-radius: 11px;
+                                    "
+                                />
+
+                                <div class="overlay" style="padding: 5px">
+                                    <a href="/trend/<%= video._id %>"
+                                        ><h6 style="color: white">
+                                            <%= video.title %>
+                                        </h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+            <ul class="press mb-4 mt-4">
+                <% for(let i = 1; i <= Math.floor(count / 12); i++) { %>
+                <li class="button mr-2">
+                    <a href="/trend?page=<%= i %>"><%= i %></a>
+                </li>
+                <% } %>
+            </ul>
+
+            <div id="nativeAds_1613496695543"></div>
+            <script>
+                (function () {
+                    var script = document.createElement("script");
+                    script.async = false;
+                    script.src =
+                        "//plug.plufdsb.com/wdgt/?PRT=ZGl2PTE2MTM0OTY2OTU1NDMmY2ZmPSZmZj1BcmlhbCZjZnQ9JmZmdD1BcmlhbCZicmM9MDBmZmZmJmliY2g9MDBmZmZmJmZjPTAwZmZmZiZodGM9ZmZmZmZmJmRiPTMmYz0xMDAwJnBkPTImaXc9MyZicj0xJmZzej0xMiZmc3Q9MjAmY2g9MiZmY3Q9MDBmZmZmJml5bj0xJml0PWxhbmQmc3Q9MSZ0YT1sZWZ0JnRpdGxlbGVuZ3RoPWZ1bGwmdHA9MSZidGM9MDAwMDAwJmRlYz11bmRlcmxpbmUmZnc9Ym9sZCZ3dD1BJnNleHVhbF9vcmllbnRhdGlvbj1zdHJhaWdodCZudWRlX3N0YXRlPWJvdGgmd2lkZ2V0X3Jlc3BvbnNpdmU9MSZwb3B1bmRlcj0wJmN1c3RvbWNzcz0mdGFnczA9YXNzO2hhcmRjb3JlO3N0ZXAgZmFtaWx5O2JsYWNrO2FkdWx0IHBheXNpdGUmcGJkZD0xJnBicD1ib3R0b20mcGJhPWNlbnRlciZ3dGRkPTEmd3R2PVRoaXMgb2ZmZXJzIHdpbGwgZW5kIHRvZGF5ISBEb24ndCBtaXNzIHRoZW0hJmZ3dD1ib2xkJnNpdGVsaW5rPTA=&source=&aff_sub=&aff_sub2=&aff_sub3=&aff_sub4=&aff_sub5=&fid=168244&file_id=517791";
+                    var dst = document.getElementsByTagName("script")[0];
+                    dst.parentNode.insertBefore(script, dst);
+                })();
+            </script>
+
+            <p class="text-muted mb-4 mt-4">
+                Disclaimer: HDPorn.download has a zero-tolerance policy against
+                illegal pornography. All galleries and links are provided by 3rd
+                parties. We have no control over the content of these pages. We
+                take no responsibility for the content on any website which we
+                link to, please use your own discretion while surfing the links.
+            </p>
+        </div>
+    </body>
+</html>

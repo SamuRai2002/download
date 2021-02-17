@@ -1,0 +1,23 @@
+{
+    "/api/stream/": {
+        "post": {
+            "description": "Create stream",
+            "tags": ["Stream"],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/StreamCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

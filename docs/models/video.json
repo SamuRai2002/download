@@ -1,0 +1,54 @@
+{
+    "SingleCreate": {
+        "properties": {
+            "link": {
+                "type": "string",
+                "required": true
+            }
+        }
+    },
+    "VideoCreate": {
+        "properties": {
+            "title": {
+                "type": "string",
+                "required": true
+            },
+            "url": {
+                "type": "string",
+                "required": true
+            },
+            "size": {
+                "type": "string",
+                "required": true
+            },
+            "category": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "VideoUpdate": {
+        "properties": {
+            "title": {
+                "type": "string",
+                "required": true
+            },
+            "url": {
+                "type": "string",
+                "required": true
+            },
+            "size": {
+                "type": "string",
+                "required": true
+            },
+            "category": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
