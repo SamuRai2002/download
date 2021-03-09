@@ -4,7 +4,18 @@ const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
 exports.home = catchAsync(async (req, res, next) => {
-    res.render("index");
+    const limit = 12;
+    const skip = limit * req.query.page;
+
+    const videos = await Video.find()
+        .select("title image")
+        .skip(skip)
+        .limit(limit)
+        .lean();
+
+    const count = await Video.find().count();
+
+    res.status(200).render("latest_videos", { videos: videos, count: count });
 });
 
 exports.latestAll = catchAsync(async (req, res, next) => {
